@@ -7,11 +7,7 @@ interface DashboardProps {
   className?: string;
 }
 
-const Dashboard: React.FC<DashboardProps & HTMLProps<HTMLDivElement>> = ({
-  children,
-  className,
-  ...restProps
-}) => {
+const Dashboard: React.FC<DashboardProps & HTMLProps<HTMLDivElement>> = ({ children, className, ...restProps }) => {
   return (
     <div className={classNames(styles.container, className)} {...restProps}>
       Hello World
