@@ -1,27 +1,28 @@
 import { APIClient } from "src/services/network/client";
-import { AxiosResponse } from "axios";
-import { Gateway, Project, Report, User } from "src/types";
+import { BackendResponse, Gateway, Project, Report, User } from "src/types/interfaces";
+import { formatDate } from "src/utils/date";
+import { REPORT_DATE_FORMAT } from "src/types/data";
 
-export const getUsers = (): Promise<AxiosResponse<User[]>> => APIClient.getAPI().get("/users");
+export const getUsers = (): Promise<BackendResponse<User[]>> => APIClient.getAPI().get("/users");
 
-export const getGateways = (): Promise<AxiosResponse<Gateway[]>> => APIClient.getAPI().get("/gateways");
+export const getGateways = (): Promise<BackendResponse<Gateway[]>> => APIClient.getAPI().get("/gateways");
 
-export const getProjects = (): Promise<AxiosResponse<Project[]>> => APIClient.getAPI().get("/projects");
+export const getProjects = (): Promise<BackendResponse<Project[]>> => APIClient.getAPI().get("/projects");
 
-export const getReports = ({
+export const getReport = ({
   from,
   to,
   gatewayId,
   projectId,
 }: {
-  from: string;
-  to: string;
+  from: Date;
+  to: Date;
   projectId?: string;
   gatewayId?: string;
-}): Promise<AxiosResponse<Report[]>> =>
-  APIClient.getAPI().post("/reports", {
-    from,
-    to,
+}): Promise<BackendResponse<Report[]>> =>
+  APIClient.getAPI().post("/report", {
+    from: formatDate(from, REPORT_DATE_FORMAT),
+    to: formatDate(to, REPORT_DATE_FORMAT),
     gatewayId,
     projectId,
   });

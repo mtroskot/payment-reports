@@ -16,7 +16,7 @@ class APIService {
     this.api.interceptors.response.use(
       async (response: AxiosResponse) => {
         // TODO once access token is available handle it's expiration
-        return response;
+        return response.data;
       },
       async (axiosError: AxiosError) => {
         throw axiosError;

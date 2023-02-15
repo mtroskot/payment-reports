@@ -1,0 +1,16 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  max-width: 470px;
+  align-self: center;
+  flex: 1;
+}
+
+.description {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.icon {
+  margin-top: 51px;
+}

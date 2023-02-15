@@ -1,0 +1,19 @@
+.container {
+  align-items: center;
+  width: 100px;
+  padding-top: 41px;
+  min-width: 60px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  color: var(--GRAY_BLUE);
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: 100ms ease-in-out;
+}

@@ -1,0 +1,42 @@
+.legendContainer {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--LIGHT_BLUE);
+  border-radius: 10px;
+  height: 53px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  margin: 0 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.legendBox {
+  min-width: 15px;
+  min-height: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+
+.chartContainer {
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+}
+
+.pieChartWrapper {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.pieChart {
+  display: flex;
+  position: relative;
+}

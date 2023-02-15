@@ -1,0 +1,26 @@
+.container.container {
+  flex-direction: row;
+  align-items: center;
+  max-width: 350px;
+}
+
+.avatar {
+  min-height: 43px;
+  min-width: 43px;
+  width: 43px;
+  height: 43px;
+  border-radius: 5px;
+  flex-direction: row;
+  background-color: var(--ORANGE);
+  justify-content: center;
+  align-items: center;
+}
+
+.initials {
+  text-transform: uppercase;
+}
+
+.name.name {
+  margin-left: 10px;
+  margin-right: 100px;
+}

@@ -1,0 +1,12 @@
+.container {
+  flex-direction: row;
+  margin: 22px 0;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+.link {
+  cursor: pointer;
+}

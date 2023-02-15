@@ -1,0 +1,55 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tableHeadContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  align-items: center;
+  background-color: var(--WHITE);
+}
+
+.tableHead {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.oddTableHead {
+  min-height: 41px;
+  background-color: var(--LIGHT_BLUE);
+}
+
+.alignStart {
+  flex: 0.8;
+  align-items: flex-start;
+}
+
+.alignCenter {
+  flex: 1;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.alignEnd {
+  flex: 0.8;
+  align-items: flex-end;
+}

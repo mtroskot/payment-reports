@@ -1,0 +1,13 @@
+.iconsContainer {
+  flex-direction: row;
+  align-items: center;
+}
+
+.reportsLogo {
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.menuIcon {
+  margin-left: 38px;
+}

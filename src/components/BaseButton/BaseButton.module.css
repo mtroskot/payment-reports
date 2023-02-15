@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  height: 32px;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container:active {
+  transform: scale(0.95);
+  transition: 100ms ease-in-out;
+}
+
+.text {
+  flex: 1;
+  justify-content: center;
+}
+
+.icon {
+  margin-left: 10px;
+}

@@ -1,0 +1,35 @@
+.dropdown {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--AQUAMARINE_20);
+  width: 200px;
+  margin-top: 42px;
+  right: 0;
+  border-radius: 10px;
+}
+
+.dropdownItem {
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--GRAY_BLUE);
+  cursor: pointer;
+}
+.selectedDropdown {
+  background-color: var(--AQUAMARINE);
+}
+
+.dropdownItem:hover {
+  background-color: var(--AQUAMARINE_TRANSPARENT);
+}
+
+.activeIcon {
+  transform: rotate(-180deg);
+  transition: 300ms ease-in-out;
+}
+
+.inactiveIcon {
+  transform: rotate(0deg);
+  transition: 300ms ease-in-out;
+}

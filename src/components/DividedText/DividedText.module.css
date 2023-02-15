@@ -1,0 +1,8 @@
+.container {
+  flex-direction: row;
+  margin-bottom: 22px;
+}
+
+.separator {
+  margin: 0 5px;
+}

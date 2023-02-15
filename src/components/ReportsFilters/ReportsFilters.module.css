@@ -1,0 +1,17 @@
+.container {
+  flex-direction: row;
+}
+
+.spacer {
+  margin-right: 22px;
+}
+
+.activeIcon {
+  transform: rotate(-180deg);
+  transition: 300ms ease-in-out;
+}
+
+.inactiveIcon {
+  transform: rotate(0deg);
+  transition: 300ms ease-in-out;
+}

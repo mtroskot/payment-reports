@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AppText correctly should render default text with  additional styles 1`] = `
+<div>
+  <p
+    class=""
+    style="color: red; line-clamp: 2;"
+  >
+    Hello World
+  </p>
+</div>
+`;
+
+exports[`renders AppText correctly should render default text without any additional styles 1`] = `
+<div>
+  <p
+    class=""
+  >
+    Hello World
+  </p>
+</div>
+`;
