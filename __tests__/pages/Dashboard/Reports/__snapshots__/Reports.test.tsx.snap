@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Reports correctly should change filters when selecting them 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class=""
+    >
+      <div
+        class=""
+      >
+        <p
+          class=""
+        >
+          reports
+        </p>
+        <p
+          class=""
+          style="line-clamp: 2;"
+        >
+          easily_generate_report_of_transactions
+        </p>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              select_project
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              select_gateway
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              10/01/2023
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              11/01/2023
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <button
+          class=""
+          style="background-color: rgb(0, 91, 150); cursor: pointer;"
+          type="button"
+        >
+          <p
+            class=""
+            style="line-clamp: 1;"
+          >
+            generate_report
+          </p>
+        </button>
+      </div>
+    </div>
+    <div
+      class=""
+    >
+      <p
+        class=""
+      >
+        no_reports
+      </p>
+      <p
+        class=""
+      >
+        no_reports_description
+      </p>
+      <div
+        title="alt_no_reports_icon"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders Reports correctly should render empty report state 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class=""
+    >
+      <div
+        class=""
+      >
+        <p
+          class=""
+        >
+          reports
+        </p>
+        <p
+          class=""
+          style="line-clamp: 2;"
+        >
+          easily_generate_report_of_transactions
+        </p>
+      </div>
+      <div
+        class=""
+      >
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              select_project
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              select_gateway
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              from_date
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <div
+          class=""
+        >
+          <button
+            class=""
+            style="background-color: rgb(27, 197, 189); cursor: pointer;"
+            type="button"
+          >
+            <p
+              class=""
+              style="line-clamp: 1;"
+            >
+              to_date
+            </p>
+            <div
+              class=""
+              title="alt_button_icon"
+            />
+          </button>
+        </div>
+        <button
+          class=""
+          style="background-color: rgb(0, 91, 150); cursor: pointer;"
+          type="button"
+        >
+          <p
+            class=""
+            style="line-clamp: 1;"
+          >
+            generate_report
+          </p>
+        </button>
+      </div>
+    </div>
+    <div
+      class=""
+    >
+      <p
+        class=""
+      >
+        no_reports
+      </p>
+      <p
+        class=""
+      >
+        no_reports_description
+      </p>
+      <div
+        title="alt_no_reports_icon"
+      />
+    </div>
+  </div>
+</div>
+`;

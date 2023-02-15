@@ -14,8 +14,8 @@ import { formatDate } from "src/utils/date";
 interface ReportsFiltersProps {
   activeDropdown: ReportsFilter | undefined;
   onProjectPickerClick: () => void;
-  selectedProject: Project | "all" | undefined;
-  selectedGateway: Gateway | "all" | undefined;
+  selectedProject: Project | "all";
+  selectedGateway: Gateway | "all";
   projectPickerItems: DropdownPickerItem[];
   gatewayPickerPickerItems: DropdownPickerItem[];
   onGatewayPickerClick: () => void;
@@ -51,20 +51,16 @@ const ReportsFilters: React.FC<ReportsFiltersProps> = ({
     <FlexDiv className={styles.container}>
       <DropdownPicker
         className={styles.spacer}
-        initialTitle={"all_projects"}
-        title={
-          selectedProject ? (selectedProject === "all" ? t("all_projects") : selectedProject.name) : t("select_project")
-        }
+        initialTitle={t("select_project")}
+        title={selectedProject === "all" ? t("all_projects") : selectedProject.name}
         onDropdownClick={onProjectPickerClick}
         isOpen={activeDropdown === ReportsFilter.PROJECT}
         items={projectPickerItems}
       />
       <DropdownPicker
         className={styles.spacer}
-        initialTitle={"all_gateways"}
-        title={
-          selectedGateway ? (selectedGateway === "all" ? t("all_gateways") : selectedGateway.name) : t("select_gateway")
-        }
+        initialTitle={t("select_gateway")}
+        title={selectedGateway === "all" ? t("all_gateways") : selectedGateway.name}
         onDropdownClick={onGatewayPickerClick}
         isOpen={activeDropdown === ReportsFilter.GATEWAY}
         items={gatewayPickerPickerItems}

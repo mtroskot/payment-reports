@@ -72,15 +72,31 @@ const Reports = () => {
     setSelectedGateway(gateway);
   }, []);
 
-  const onFromDateSelect = useCallback((date: Date) => {
-    setActiveReportsFilter(undefined);
-    setSelectedFromDate(date);
-  }, []);
+  const onFromDateSelect = useCallback(
+    (date: Date) => {
+      setActiveReportsFilter(undefined);
+      setSelectedFromDate(() => {
+        if (selectedToDate && date.getTime() > selectedToDate.getTime()) {
+          return selectedToDate;
+        }
+        return date;
+      });
+    },
+    [selectedToDate]
+  );
 
-  const onToDateSelect = useCallback((date: Date) => {
-    setActiveReportsFilter(undefined);
-    setSelectedToDate(date);
-  }, []);
+  const onToDateSelect = useCallback(
+    (date: Date) => {
+      setActiveReportsFilter(undefined);
+      setSelectedToDate(() => {
+        if (selectedFromDate && selectedFromDate?.getTime() > date.getTime()) {
+          return selectedFromDate;
+        }
+        return date;
+      });
+    },
+    [selectedFromDate]
+  );
 
   const onReportsFilterClick = useCallback((filter: ReportsFilter) => {
     setActiveReportsFilter((prevState) => (prevState === filter ? undefined : filter));
@@ -246,7 +262,8 @@ const Reports = () => {
           onGenerateReportClick={onGenerateReportClick}
           selectedProject={selectedProject}
           selectedGateway={selectedGateway}
-          generateReportDisabled={!selectedFromDate || !selectedToDate}
+          generateReportDisabled={false}
+          // generateReportDisabled={!selectedFromDate || !selectedToDate}
         />
       </FlexDiv>
       {!hasReports ? (

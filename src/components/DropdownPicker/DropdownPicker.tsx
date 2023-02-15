@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./DropdownPicker.module.css";
 import BaseButton from "src/components/BaseButton";
 import { Icons } from "src/types/data";
@@ -7,6 +7,7 @@ import AppText from "src/components/AppText";
 import { DropdownPickerItem } from "src/types/interfaces";
 import FlexDiv from "src/components/FlexDiv";
 import classNames from "classnames";
+import { useUpdateEffect } from "src/hooks/useUpdateEffect";
 
 interface DropdownPickerProps {
   className?: string;
@@ -27,9 +28,10 @@ const DropdownPicker: React.FC<DropdownPickerProps> = ({
 }) => {
   const [isTouched, setIsTouched] = useState(false);
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     setIsTouched(true);
   }, [title]);
+
   return (
     <FlexDiv className={className}>
       <BaseButton
