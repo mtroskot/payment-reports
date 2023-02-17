@@ -262,8 +262,7 @@ const Reports = () => {
           onGenerateReportClick={onGenerateReportClick}
           selectedProject={selectedProject}
           selectedGateway={selectedGateway}
-          generateReportDisabled={false}
-          // generateReportDisabled={!selectedFromDate || !selectedToDate}
+          generateReportDisabled={!selectedFromDate || !selectedToDate}
         />
       </FlexDiv>
       {!hasReports ? (

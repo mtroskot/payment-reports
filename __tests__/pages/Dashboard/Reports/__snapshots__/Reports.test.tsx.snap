@@ -249,7 +249,7 @@ exports[`renders Reports correctly should render empty report state 1`] = `
         </div>
         <button
           class=""
-          style="background-color: rgb(0, 91, 150); cursor: pointer;"
+          style="background-color: rgb(126, 130, 153); cursor: default;"
           type="button"
         >
           <p
