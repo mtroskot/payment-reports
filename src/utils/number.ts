@@ -14,30 +14,10 @@ export function formatAmountForDisplay({
   if (amount === undefined || amount === null) {
     return "";
   }
-  let stringAmount = roundToTwoDecimals(amount).toString(10);
-  const indexOfDot = stringAmount.indexOf(".");
-  let decimals: string = "";
-  if (separateThousands) {
-    if (indexOfDot > -1) {
-      decimals = stringAmount.substring(indexOfDot);
-      decimals = decimals.length === 2 ? `${decimals}0` : decimals;
-    }
-    stringAmount =
-      stringAmount
-        .substring(0, decimals.length ? indexOfDot : undefined)
-        .split("")
-        .reverse()
-        .map((num, index, array) => {
-          if (index % 3 === 0 && index !== 0) {
-            return num + ",";
-          }
-          return num;
-        })
-        .reverse()
-        .join("") + decimals;
-  } else if (stringAmount.substring(indexOfDot).length === 2) {
-    stringAmount = `${stringAmount}0`;
-  }
-
-  return `${stringAmount} ${currency}`;
+  const [integer, decimal] = amount.toString().split(".");
+  return `${amount.toLocaleString("en-US", {
+    useGrouping: separateThousands,
+    minimumFractionDigits: decimal && decimal.length === 1 ? 2 : 0,
+    maximumFractionDigits: 2,
+  })} ${currency}`;
 }
